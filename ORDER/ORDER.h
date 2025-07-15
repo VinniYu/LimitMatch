@@ -20,7 +20,7 @@ public:
     Order(int id, OrderSide side, OrderType type, double price, int quantity, long timestamp);
 
     // utility functions
-    void printOrder();
+    void printOrder() const;
 
     // accessors
     int       getID()        const { return id; };

@@ -1,6 +1,7 @@
 
 #include "SETTINGS.h"
 #include "ORDER/ORDER.h"
+#include "EVENT/EVENT.h"
 
 using namespace std;
 
@@ -28,7 +29,11 @@ void runOnce() {
     srand(static_cast<unsigned>(time(nullptr)));
 
     Order o = createRandomOrder(0);
-    o.printOrder();
+
+    OrderSubmittedEvent event(o);
+    
+    cout << "Event type: " << event.getType() << endl;
+    event.getOrder().printOrder();
 }
 
 void runLoop() {

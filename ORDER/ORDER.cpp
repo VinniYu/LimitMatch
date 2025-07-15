@@ -1,12 +1,11 @@
 #include "ORDER/ORDER.h"
 
-using namespace std;
 
 Order::Order(int id, OrderSide side, OrderType type, double price, int quantity, long timestamp)
     : id(id), side(side), type(type), price(price), quantity(quantity), timestamp(timestamp) {}
 
 
-void Order::printOrder() {
+void Order::printOrder() const {
     cout << "Printing out order" << endl;
     cout << "ID: " << getID() << endl;
 

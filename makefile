@@ -11,10 +11,10 @@ LDFLAGS = ${LDFLAGS_COMMON}
 EXECUTABLE = limitMatch
 
 # Source files
-SOURCES = main.cpp ORDER/ORDER.cpp 
+SOURCES = main.cpp ORDER/ORDER.cpp EVENT/EVENT.cpp
 
 # Object files
-OBJECTS = main.o ORDER/ORDER.o 
+OBJECTS = main.o ORDER/ORDER.o EVENT/EVENT.o
 
 # Default target
 all: $(EXECUTABLE)
