@@ -12,6 +12,7 @@ private:
     int id;
     OrderSide side;
     OrderType type;
+    string symbol;
     double price;
     int quantity;
     long timestamp;
@@ -26,6 +27,7 @@ public:
     int       getID()        const { return id; };
     OrderSide getSide()      const { return side; }; 
     OrderType getType()      const { return type; }; 
+    string    getSymbol()    const { return symbol; };
     double    getPrice()     const { return price; }; 
     int       getQuantity()  const { return quantity; }; 
     long      getTimestamp() const { return timestamp; }; 

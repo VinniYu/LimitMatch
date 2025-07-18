@@ -1,9 +1,11 @@
 
 #include "SETTINGS.h"
-#include "ORDER/ORDER.h"
-#include "EVENT/EVENT.h"
+#include "order/ORDER.h"
+#include "event/EVENT.h"
 
 using namespace std;
+
+
 
 // forward declarations for main
 void runOnce();
@@ -31,6 +33,8 @@ void runOnce() {
     Order o = createRandomOrder(0);
 
     OrderSubmittedEvent event(o);
+
+
     
     cout << "Event type: " << event.getType() << endl;
     event.getOrder().printOrder();
