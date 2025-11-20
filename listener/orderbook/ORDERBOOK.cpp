@@ -27,6 +27,12 @@ void Orderbook::addOrder(const Order& order) {
 // low level add order
 void SymbolOrderbook::addOrder(const Order& order) {
 
+    // for now, just always add the orders to the symbol book
+    if (order.getSide() == OrderSide::BUY) 
+        buyOrders[order.getPrice()].push_back(order);
+    else if (order.getSide() == OrderSide::SELL) 
+        sellOrders[order.getPrice()].push_back(order);
+
     // TODO: MATCH LOGIC
     // if (order.getType() == OrderType::MARKET) {
     //     // match immediately against best opposite side

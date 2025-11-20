@@ -25,5 +25,6 @@ public:
     }
 };
 
+extern Dispatcher dispatcher;
 
 #endif
